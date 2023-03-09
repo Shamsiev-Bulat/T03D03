@@ -1,12 +1,17 @@
 #include <stdio.h>
-double biggest(double x, double y) { return (x > y ? x : y); }
+int max(int x, int y);
 
 int main() {
-    double x, y;
-    scanf("%lf %lf", &x, &y);
-    if (x == (int)x && y == (int)y) {
-        printf("biggest is %.0lf, lowest is %lf", x, y);
+    int x, y;
+    if ((scanf("%d", &x) && scanf("%d", &y))) {
+        printf("%d", max(x, y));
     } else
         printf("n/a");
-    return 0;
+}
+
+int max(int x, int y) {
+    if (x > y)
+        return x;
+    else
+        return y;
 }
