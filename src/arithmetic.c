@@ -1,15 +1,14 @@
 #include <stdio.h>
-int main(){
-    double x, y;
-    scanf("%lf %lf",&x, &y);
-    if (x == (int)x && y == (int)y) {
-        printf("%.0lf %.0lf %.0lf", x+y, x-y, x*y);
-        if (y == 0)
-            printf("n/a\n");
-        else 
-            printf("%d\n", (int)x / (int)y);
+int main() {
+    double t, e;
+    scanf("%lf %lf", &t, &e);
+    if (t == (int)t && e == (int)e) {
+        printf("%.0lf %.0lf %.0lf", t + e, t - e, t * e);
+        if (e == 0)
+            printf("n/a");
+        else
+            printf("%0lf", (int)t / (int)e);
     } else
-        printf("n/a\n");
+        printf("n/a");
     return 0;
-    
 }
